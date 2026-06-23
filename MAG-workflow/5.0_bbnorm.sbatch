@@ -22,7 +22,6 @@ echo ""
 echo "Step 1: Running bbnorm..."
 echo "=========================================="
 
-
 QC_DIR="/storage/home/hcoda1/0/skapasi3/r-ktk3-0/Girasoles-2/1_QC"
 cd fastp
 
