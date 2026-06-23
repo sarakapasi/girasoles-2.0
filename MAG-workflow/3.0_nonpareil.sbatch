@@ -14,21 +14,21 @@ source /storage/home/hcoda1/0/skapasi3/r-ktk3-0/miniconda3/etc/profile.d/conda.s
 cd /storage/home/hcoda1/0/skapasi3/r-ktk3-0/Girasoles-2/1_QC
 conda activate girasoles-2-qc-1
 
-mkdir nonpareil_curve_files
-mkdir nonpareil_results
+# mkdir nonpareil_curve-files
+# mkdir nonpareil_results
 
 for f in fastp/*-trimmed_1.fastq.gz; do
     seqtk seq -a "$f" > "${f%.fastq.gz}.fasta"
 done
 
-for input in *-trimmed_1.fasta; do
+for input in fastp/*-trimmed_1.fasta; do
     base="${input%-trimmed_1.fasta}"
     nonpareil -s "$input" -T kmer -f fasta -b "$base" -X 50000 -t 8
 done
 
 # File cleanup
-rm *-trimmed_1.fasta
-mv *.npo nonpareil_curve_files/
-mv *.npa nonpareil_results/
-mv *.npc nonpareil_results/
-mv *.npl nonpareil_results/
+rm fastp/*-trimmed_1.fasta
+mv fastp/*.npo nonpareil_curve-files/
+mv fastp/*.npa nonpareil_results/
+mv fastp/*.npc nonpareil_results/
+mv fastp/*.npl nonpareil_results/
