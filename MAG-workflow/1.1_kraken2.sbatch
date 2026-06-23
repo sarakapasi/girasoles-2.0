@@ -38,11 +38,8 @@ R2="${FILE_HOME_DIR}/${SAMPLE_NAME}/${SAMPLE_NAME}_2.fastq.gz"
 echo ""
 echo "Step 2: Running Kraken2..."
 echo "=========================================="
-kraken2 --db kraken2_human_db/ --gzip-compressed --paired "${R1}" "${R2}" --threads $THREADS \
-    --output "${OUTPUT_DIR}/${SAMPLE_NAME}-kraken2-out.txt" \
-    --report "${OUTPUT_DIR}/${SAMPLE_NAME}-kraken2-report.txt" \
-    --unclassified-out "${SAMPLE_NAME}-filtered#.fastq"
 
+kraken2 --db kraken2_human_db/ --gzip-compressed --paired "${R1}" "${R2}" --threads $THREADS --report "${OUTPUT_DIR}/${SAMPLE_NAME}-kraken2-report.txt" --unclassified-out "${SAMPLE_NAME}-filtered#.fastq"
 gzip "${SAMPLE_NAME}-filtered_1.fastq" "${SAMPLE_NAME}-filtered_2.fastq"
 
 echo ""
