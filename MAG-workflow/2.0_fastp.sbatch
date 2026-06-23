@@ -37,7 +37,7 @@ OUT_2="${OUTPUT_DIR}/${SAMPLE_NAME}_trimmed_2.fastq.gz"
 echo ""
 echo "Step 2: Running fastp..."
 echo "=========================================="
-fastp -i "${TRIMMED_1}" -o "${OUT_1}" -I "${TRIMMED_2}" -O "${OUT_2}" -z 9 -j "fastp-reports/${SAMPLE_NAME}.json" -h "fastp-reports/${SAMPLE_NAME}.html" --verbose 
+fastp -i "${TRIMMED_1}" -o "${OUT_1}" -I "${TRIMMED_2}" -O "${OUT_2}" -l 50 -z 9 -j "fastp-reports/${SAMPLE_NAME}.json" -h "fastp-reports/${SAMPLE_NAME}.html" --verbose 
 echo ""
 echo "=========================================="
 echo "Fastp completed successfully!"
