@@ -16,7 +16,7 @@ conda activate girasoles-2-qc-1
 SAMPLE_LIST="/storage/home/hcoda1/0/skapasi3/r-ktk3-0/Girasoles-2/1_QC/folder_list.txt"
 SAMPLE_NAME=$(sed -n "${SLURM_ARRAY_TASK_ID}p" "$SAMPLE_LIST")
 
-QC_FILE_DIR = "/storage/home/hcoda1/0/skapasi3/r-ktk3-0/Girasoles-2/1_QC"
+QC_FILE_DIR="/storage/home/hcoda1/0/skapasi3/r-ktk3-0/Girasoles-2/1_QC"
 cd ${QC_FILE_DIR}
 
 # Prep output folders:
