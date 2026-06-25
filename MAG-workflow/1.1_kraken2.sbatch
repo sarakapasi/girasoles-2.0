@@ -2,8 +2,8 @@
 #SBATCH -J kraken2
 #SBATCH -A gts-ktk3-coda20
 #SBATCH -n 8
-#SBATCH --mem=300G
-#SBATCH -t 24:00:00
+#SBATCH --mem=30G
+#SBATCH -t 00:30:00
 #SBATCH --cpus-per-task=16
 #SBATCH -q inferno
 #SBATCH --mail-type=BEGIN,END,FAIL
