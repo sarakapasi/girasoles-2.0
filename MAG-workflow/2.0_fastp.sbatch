@@ -2,8 +2,8 @@
 #SBATCH -J fastp
 #SBATCH -A gts-ktk3-coda20
 #SBATCH -n 8
-#SBATCH --mem=300G
-#SBATCH -t 18:00:00
+#SBATCH --mem=50G
+#SBATCH -t 00:20:00
 #SBATCH -q inferno
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH -o /storage/home/hcoda1/0/skapasi3/r-ktk3-0/Girasoles-2/log/0623_fastp_out.16
