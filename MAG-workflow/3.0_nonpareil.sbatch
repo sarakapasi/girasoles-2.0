@@ -2,8 +2,8 @@
 #SBATCH -J nonpareil
 #SBATCH -A gts-ktk3-coda20
 #SBATCH -n 8
-#SBATCH --mem=300G
-#SBATCH -t 24:00:00
+#SBATCH --mem=15G
+#SBATCH -t 4:00:00
 #SBATCH --cpus-per-task=16
 #SBATCH -q inferno
 #SBATCH --mail-type=BEGIN,END,FAIL
