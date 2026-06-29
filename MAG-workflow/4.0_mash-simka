@@ -40,6 +40,7 @@ mash dist -p 8 mash/all_samples.msh mash/all_samples.msh > mash/mash_distances_a
 
 # Make simka input file - simka_input.txt in Github
 
+dos2unix simka_input.txt
 simka -in simka_input.txt -out simka -out-tmp scratch/simka -simple-dist -complex-dist -verbose
 
 # Code for visualization is in another script - requires R
